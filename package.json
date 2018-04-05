@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/malgorzatakapuscinska/modul16_3#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "webpack": "^3.10.0"
   }
 }
