@@ -1,0 +1,23 @@
+{
+  "name": "modul16_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malgorzatakapuscinska/modul16_3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malgorzatakapuscinska/modul16_3/issues"
+  },
+  "homepage": "https://github.com/malgorzatakapuscinska/modul16_3#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
