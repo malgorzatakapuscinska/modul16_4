@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
@@ -15,6 +16,11 @@ class App extends React.Component {
         };
         const data = [...this.state.data, todo];
         this.setState({data});
+    }
+    
+    removeToDo(id){
+    	const remainder = this.state.data.filter((todo) => todo.id !== id); //filter returns array that contains all todo except todo with id that function get as parameter
+    	this.state({data: remainder});
     }
 }
 

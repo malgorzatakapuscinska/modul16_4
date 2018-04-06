@@ -7878,6 +7878,15 @@ var App = function (_React$Component) {
             var data = [].concat(_toConsumableArray(this.state.data), [todo]);
             this.setState({ data: data });
         }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: style.TodoApp },
+                'Tutaj pojawi\u0105 si\u0119 komponenty naszej aplikacji.'
+            );
+        }
     }]);
 
     return App;
