@@ -2,12 +2,14 @@ import React from 'react';
 import uuid from 'uuid';
 import ReactDOM from 'react-dom';
 import style from './App.css';
+import Title from '../components/Title';
 
 class App extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            data: []
+            data: [],
+            title: "To Do App"
         };
     }
     addTodo(val){
@@ -24,10 +26,15 @@ class App extends React.Component {
     	this.state({data: remainder});
     }
     
+    numberOfToDo(data){
+    	const numberOfToDo = this.state.data.length;
+    	return `An amount of added toDo is: ${numberOfToDo}`;
+    }
+    
     render(){
     	return (
     		<div className={style.TodoApp}>
-    			Tutaj pojawią się nasze komponenty.
+    			<Title title="ToDo App" number={this.state.data.length}></Title>
     		</div>
     	);
     }
