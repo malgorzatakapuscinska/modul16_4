@@ -26,11 +26,6 @@ class App extends React.Component {
     	this.state({data: remainder});
     }
     
-    numberOfToDo(data){
-    	const numberOfToDo = this.state.data.length;
-    	return `An amount of added toDo is: ${numberOfToDo}`;
-    }
-    
     render(){
     	return (
     		<div className={style.TodoApp}>
