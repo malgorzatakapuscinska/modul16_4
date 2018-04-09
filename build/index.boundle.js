@@ -7963,12 +7963,6 @@ var App = function (_React$Component) {
             this.state({ data: remainder });
         }
     }, {
-        key: 'numberOfToDo',
-        value: function numberOfToDo(data) {
-            var numberOfToDo = this.state.data.length;
-            return 'An amount of added toDo is: ' + numberOfToDo;
-        }
-    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
