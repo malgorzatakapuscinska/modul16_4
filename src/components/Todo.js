@@ -1,9 +1,12 @@
 import React from 'react';
 
 const Todo = (props) => {
+	console.log(props);
+	console.log(props.todo.text);
+	console.log(props.remove);
 	<li>
-		<p>{this.props.todoItems.text}</p>
-		<button onclick={this.props.remove}>x</button>
+		<p>{props.todo.text}</p>
+		<button onclick={props.remove}>x</button>
 	</li>
 }
 
