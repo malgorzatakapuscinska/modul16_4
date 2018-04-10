@@ -2,14 +2,17 @@ import React from 'react';
 
 const FormFortodo = (props) => {
 	console.log(props);
+	console.log(props.onChange);
+	console.log(props.onSubmit);
 	return (
-		<form>
+		<form onSubmit={props.onSubmit}>
 			<label htmlFor = {'text'}>Write a task to add</label>
 			<input 
+				onChange={props.onChange} 
 				id={'text'}
-				type={'text'}
-				value={props.input}/>
-			<input type={'submit'}/>
+				value={props.input}
+				/>
+			<input type={'submit'} value='submit' />
 		</form>
 	);
 	
@@ -19,20 +22,21 @@ class TodoForm extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
-			input: '',
+			input: ''
 		}
 	}
 	
 	handleChange(event) {
-		let input = this.event.target.value;
-		console.log('input value: ' + input);
-		this.setState({input: input});
+		let todoValue = event.target.value;
+		console.log('input value: ' + todoValue);
+		this.setState({input: todoValue});
 		console.log(this.state.input);
 	}
 	
-	handleSubmit() {
-		this.preventDefault();
-		const value = this.state.input;
+	handleSubmit(event) {
+		event.preventDefault();
+		console.log(this.state.input);
+		let value = this.state.input;
 		this.props.addTodo(value);
 		console.log(this.props.addTodo);
 	}
