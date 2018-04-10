@@ -26,8 +26,11 @@ if (env === 'production') {
 }
 
 module.exports = {
-	entry: './src/index.js',
-		output: {
+	entry: [ 
+		'react-hot-loader/patch',
+		'./src/index.js'
+	],
+	output: {
 			path: path.resolve(__dirname, 'build'),
 			filename: 'index.boundle.js'
 	},
