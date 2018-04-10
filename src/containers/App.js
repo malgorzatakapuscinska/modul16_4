@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import style from './App.css';
 import Title from '../components/Title';
 import TodoList from './TodoList';
+import TodoForm from './TodoForm';
 
 
 
@@ -36,13 +37,14 @@ class App extends React.Component {
     
     removeToDo(id){
     	const remainder = this.state.data.filter((todo) => todo.id !== id); //filter returns array that contains all todo except todo with id that function get as parameter
-    	this.state({data: remainder});
+    	this.setState({data: remainder});
     }
     
     render(){
     	return (
     		<div className={style.TodoApp}>
     			<Title title="ToDo App" number={this.state.data.length}></Title>
+    			<TodoForm addTodo={this.addTodo.bind(this)} data={this.state.data}></TodoForm>
     			<TodoList todoItems={this.state.data} removeTodo={this.removeToDo.bind(this)}></TodoList>
     		</div>
     	);
