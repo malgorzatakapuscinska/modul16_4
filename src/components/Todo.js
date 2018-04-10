@@ -4,10 +4,11 @@ const Todo = (props) => {
 	console.log(props);
 	console.log(props.todo.text);
 	console.log(props.remove);
+	return (
 	<li>
 		<p>{props.todo.text}</p>
 		<button onclick={props.remove}>x</button>
-	</li>
+	</li>);
 }
 
 export default Todo;
