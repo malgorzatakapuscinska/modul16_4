@@ -2,7 +2,7 @@ import React from 'react';
 
 const Title = (props) => {
 	return (
-	<div>
+	<div className={'title'}>
 		<h1>{props.title}</h1>
 		<p>Number of todo tasks: {props.number}</p>
 	</div>

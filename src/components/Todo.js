@@ -7,8 +7,10 @@ const Todo = (props) => {
 	console.log(props.todo.id);
 	return (
 		<li>
-			<p>{props.todo.text}</p>
-			<button onClick={() => props.remove(props.todo.id)}>x</button>
+			<a href={'#'}>
+				<p>{props.todo.text}</p>
+				<button onClick={() => props.remove(props.todo.id)}>x</button>
+			</a>
 		</li>
 	);
 }
