@@ -1,18 +1,19 @@
 import React from 'react';
+import style from './TodoForm.css'
 
 const FormFortodo = (props) => {
 	console.log(props);
 	console.log(props.onChange);
 	console.log(props.onSubmit);
 	return (
-		<form onSubmit={props.onSubmit}>
+		<form onSubmit={props.onSubmit} className={style.TodoForm}>
 			<label htmlFor = {'text'}>Write a task to add</label>
 			<input 
 				onChange={props.onChange} 
 				id={'text'}
 				value={props.input}
 				/>
-			<input type={'submit'} value='submit' />
+			<button type={'submit'} value='submit'>Dodaj</button>
 		</form>
 	);
 	
