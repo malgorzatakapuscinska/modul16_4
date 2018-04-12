@@ -1,5 +1,6 @@
 import React from 'react';
 import Todo from '../components/Todo';
+import style from './TodoList.css';
 
 class TodoList extends React.Component{
 	constructor(props){
@@ -13,7 +14,7 @@ class TodoList extends React.Component{
 	
 	render() {
 		return (
-			<ul>
+			<ul className={style.TodoList}>
 				{this.todoItems}
 			</ul>
 		);
